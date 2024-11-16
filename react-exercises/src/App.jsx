@@ -3,9 +3,10 @@ import CoreConcept from "./components/CoreConcept/CoreConcept.jsx";
 import Header from "./components/Header/Header.jsx";
 import TabButton from './components/TabButton.jsx'
 import {CORE_CONCEPTS} from "./data.js";
+import {EXAMPLES} from './data-with-examples.js'
 
 function App() {
-    const [selectedTopic, setSelectedTopic] = useState('Please click the button');
+    const [selectedTopic, setSelectedTopic] = useState('components');
     let tabContent = 'Please click the button'
 
     function handleClick(selectedButton) {
@@ -33,7 +34,11 @@ function App() {
                         <TabButton label="Props" onSelect={()=> handleClick('props')}></TabButton>
                         <TabButton label="State" onSelect={()=> handleClick('state')}></TabButton>
                     </menu>
-                    {selectedTopic}
+                    <div id="tab-content">
+                        <h3>{EXAMPLES[selectedTopic].title}</h3>
+                        <p>{EXAMPLES[selectedTopic].description}</p>
+                        <pre>{EXAMPLES[selectedTopic].code}</pre>
+                    </div>
                 </section>
             </main>
         </div>
