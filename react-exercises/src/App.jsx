@@ -1,8 +1,8 @@
 import {useState} from 'react';
-import CoreConcepts from "./components/CoreConcept/CoreConcepts.jsx";
 import Header from "./components/Header/Header.jsx";
 import TabButton from './components/TabButton.jsx'
 import Examples from "./components/Examples.jsx";
+import CoreConcepts from "./components/CoreConcept/CoreConcepts.jsx";
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
         <div>
             <Header />
             <main>
-                <CoreConcepts/>
+              <CoreConcepts/>
                <Examples/>
             </main>
         </div>
