@@ -1,0 +1,34 @@
+import TabButton from "./TabButton.jsx";
+import {EXAMPLES} from "../data-with-examples.js";
+import {useState} from "react";
+
+export default function Examples() {
+
+const [selectedTopic, setSelectedTopic] = useState();
+let tabContent = 'Please click the button'
+
+function handleClick(selectedButton) {
+    setSelectedTopic(selectedButton)
+    console.log(tabContent)
+}
+    return (
+        <section id="examples">
+            <h2>Examples</h2>
+            <menu>
+                <TabButton isSelected={selectedTopic === 'components'} label="Components"
+                           onSelect={() => handleClick('components')}></TabButton>
+                <TabButton isSelected={selectedTopic === 'jsx'} label="JSX"
+                           onSelect={() => handleClick('jsx')}></TabButton>
+                <TabButton isSelected={selectedTopic === 'props'} label="Props"
+                           onSelect={() => handleClick('props')}></TabButton>
+                <TabButton isSelected={selectedTopic === 'state'} label="State"
+                           onSelect={() => handleClick('state')}></TabButton>
+            </menu>
+            {!selectedTopic && <p>Please select a topic.</p>}
+            {selectedTopic && <div id="tab-content"><h3>{EXAMPLES[selectedTopic].title}</h3>
+                <p>{EXAMPLES[selectedTopic].description}</p>
+                <pre><code>{EXAMPLES[selectedTopic].code}</code></pre>
+            </div>}
+        </section>
+    )
+}
