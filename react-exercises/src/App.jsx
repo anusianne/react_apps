@@ -6,6 +6,7 @@ import {useState} from 'react';
 import Card from "./Card.jsx";
 import Student from "./Student.jsx";
 import UserGreeting from "./UserGreeting.jsx";
+import List from "./List.jsx";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
            <Student name="Bob" age="30" isStudent={true}/>
            <Student name="Patrick" age={42} isStudent={false}/>
            <UserGreeting isLoggedIn={true} username="Anne"/>
+           <List/>
        </>
     );
 }
