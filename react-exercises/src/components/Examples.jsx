@@ -7,7 +7,7 @@ import {useState} from "react";
 export default function Examples() {
 
 const [selectedTopic, setSelectedTopic] = useState();
-let tabContent = 'Please click the button'
+let tabContent = 'Please click the button.'
 
 function handleClick(selectedButton) {
     setSelectedTopic(selectedButton)
