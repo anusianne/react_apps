@@ -7,15 +7,16 @@ import {useState} from 'react';
 // import Student from "./Student.jsx";
 // import UserGreeting from "./UserGreeting.jsx";
 // import List from "./List.jsx";
-import MyComponent from "./MyComponent.jsx";
+// import MyComponent from "./MyComponent.jsx";
+import Counter from "./Counter.jsx";
 
 function App() {
     const fruits = [
-        {name: "apple", calories: 95, id:1},
-        {name: "orange", calories: 45, id:2},
-        {name: "banana", calories:105, id:3},
-        {name: "coconut", calories: 159, id:4},
-        {name: "pineapple", calories: 37, id:5}];
+        {name: "apple", calories: 95, id: 1},
+        {name: "orange", calories: 45, id: 2},
+        {name: "banana", calories: 105, id: 3},
+        {name: "coconut", calories: 159, id: 4},
+        {name: "pineapple", calories: 37, id: 5}];
 
     return (
         // <div>
@@ -25,15 +26,16 @@ function App() {
         //        <Examples/>
         //     </main>
         // </div>
-       <>
-           {/*<Card/>*/}
-           {/*<Card/>*/}
-           {/*<Student name="Bob" age="30" isStudent={true}/>*/}
-           {/*<Student name="Patrick" age={42} isStudent={false}/>*/}
-           {/*<UserGreeting isLoggedIn={true} username="Anne"/>*/}
-           {/*<List items={fruits} category="Fruits"/>*/}
-           <MyComponent/>
-       </>
+        <>
+            {/*<Card/>*/}
+            {/*<Card/>*/}
+            {/*<Student name="Bob" age="30" isStudent={true}/>*/}
+            {/*<Student name="Patrick" age={42} isStudent={false}/>*/}
+            {/*<UserGreeting isLoggedIn={true} username="Anne"/>*/}
+            {/*<List items={fruits} category="Fruits"/>*/}
+            {/*<MyComponent/>*/}
+            <Counter/>
+        </>
     );
 }
 
