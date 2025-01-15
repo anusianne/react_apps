@@ -7,8 +7,8 @@ import {useState} from 'react';
 // import Student from "./Student.jsx";
 // import UserGreeting from "./UserGreeting.jsx";
 // import List from "./List.jsx";
-// import MyComponent from "./MyComponent.jsx";
-import Counter from "./Counter.jsx";
+import MyComponent from "./MyComponent.jsx";
+
 
 function App() {
     const fruits = [
@@ -33,8 +33,7 @@ function App() {
             {/*<Student name="Patrick" age={42} isStudent={false}/>*/}
             {/*<UserGreeting isLoggedIn={true} username="Anne"/>*/}
             {/*<List items={fruits} category="Fruits"/>*/}
-            {/*<MyComponent/>*/}
-            <Counter/>
+            <MyComponent/>
         </>
     );
 }
