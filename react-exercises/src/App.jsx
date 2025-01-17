@@ -7,7 +7,8 @@ import {useState} from 'react';
 // import Student from "./Student.jsx";
 // import UserGreeting from "./UserGreeting.jsx";
 // import List from "./List.jsx";
-import MyComponent from "./MyComponent.jsx";
+// import MyComponent from "./MyComponent.jsx";
+import ColorPicker from "./components/ColorPicker/ColorPicker.jsx";
 
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
             {/*<Student name="Patrick" age={42} isStudent={false}/>*/}
             {/*<UserGreeting isLoggedIn={true} username="Anne"/>*/}
             {/*<List items={fruits} category="Fruits"/>*/}
-            <MyComponent/>
+            {/*<MyComponent/>*/}
+            <ColorPicker/>
         </>
     );
 }
