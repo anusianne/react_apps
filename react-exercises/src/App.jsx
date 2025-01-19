@@ -8,7 +8,8 @@ import {useState} from 'react';
 // import UserGreeting from "./UserGreeting.jsx";
 // import List from "./List.jsx";
 // import MyComponent from "./MyComponent.jsx";
-import ColorPicker from "./components/ColorPicker/ColorPicker.jsx";
+// import ColorPicker from "./components/ColorPicker/ColorPicker.jsx";
+import Counter from "./Counter.jsx";
 
 
 function App() {
@@ -28,14 +29,12 @@ function App() {
         //     </main>
         // </div>
         <>
-            {/*<Card/>*/}
-            {/*<Card/>*/}
             {/*<Student name="Bob" age="30" isStudent={true}/>*/}
             {/*<Student name="Patrick" age={42} isStudent={false}/>*/}
             {/*<UserGreeting isLoggedIn={true} username="Anne"/>*/}
             {/*<List items={fruits} category="Fruits"/>*/}
             {/*<MyComponent/>*/}
-            <ColorPicker/>
+            <Counter/>
         </>
     );
 }
