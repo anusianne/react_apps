@@ -10,10 +10,13 @@ export default function Cars() {
         const newCar = {year: carYear, make: carMake, model: carModel};
 
         setCars(c => [...c, newCar]);
+        setCarYear(new Date().getFullYear())
+        setCarModel('');
+        setCarMake('')
     }
 
     function handleRemoveCar(index) {
-
+        setCars(c => c.filter((_, id) => id !== index))
     }
 
     function handleYearChange(e) {
@@ -34,7 +37,7 @@ export default function Cars() {
             <h2>List of car objects: </h2>
             <ul>
                 {cars.map((car, index) =>
-                    <li key={index}>{car.year} {car.make} {car.model}</li>
+                    <li key={index} onClick={() => handleRemoveCar(index)}>{car.year} {car.make} {car.model}</li>
                 )}
             </ul>
 
