@@ -10,7 +10,8 @@ import {useState} from 'react';
 // import MyComponent from "./MyComponent.jsx";
 // import ColorPicker from "./components/ColorPicker/ColorPicker.jsx";
 // import Counter from "./Counter.jsx";
-import Cars from "./components/Cars.jsx";
+// import Cars from "./components/Cars.jsx";
+import ToDoList from "./components/ToDoList/ToDoList.jsx";
 
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
             {/*<List items={fruits} category="Fruits"/>*/}
             {/*<MyComponent/>*/}
             {/*<Counter/>*/}
-            <Cars/>
+            {/*<Cars/>*/}
+            <ToDoList/>
         </>
     );
 }
