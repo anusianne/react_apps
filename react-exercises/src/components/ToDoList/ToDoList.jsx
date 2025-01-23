@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 export default function ToDoList() {
-    const [tasks, setTasks] = useState('');
+    const [tasks, setTasks] = useState(['Laundry', 'Shopping', 'Cleaning']);
     const [newTask, setNewTask] = useState('');
 
     function handleTaskChange(e) {
@@ -9,11 +9,15 @@ export default function ToDoList() {
     }
 
     function addTask() {
-
+        if (newTask.trim() !== '') {
+            setTasks(t => [...tasks, newTask])
+            setNewTask('')
+        }
     }
 
     function deleteTask(index) {
-
+        const updatedTask = tasks.filter((_, i) => i !== index)
+        setTasks(updatedTask)
     }
 
     function moveTaskUp(index) {
@@ -32,6 +36,15 @@ export default function ToDoList() {
             />
             <button className="addButon" onClick={addTask}>Add Task</button>
         </div>
+        <ol>
+            {tasks.map((task, index) =>
+                <li key={index}>
+                    <span class="text">{task}</span>
+                    <button className={"deleteButton"} onClick={() => deleteTask(index)}>Delete</button>
+                    <button className={"moveButton"} onClick={() => moveTaskUp(index)}>UP Task</button>
+                    <button className={"moveButton"} onClick={() => moveTaskDown(index)}>DOWN Task</button>
+                </li>)}
+        </ol>
 
     </div>
 }
